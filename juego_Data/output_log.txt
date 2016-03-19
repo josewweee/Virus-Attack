@@ -1,0 +1,51 @@
+Initialize engine version: 5.3.2f1 (e87ab445ead0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     912 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\USER\Documents\Virus-Attack\juego_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\USER\Documents\Virus-Attack\juego_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\USER\Documents\Virus-Attack\juego_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\USER\Documents\Virus-Attack\juego_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\USER\Documents\Virus-Attack\juego_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\USER\Documents\Virus-Attack\juego_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\USER\Documents\Virus-Attack\juego_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\USER\Documents\Virus-Attack\juego_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.416 seconds
+Platform assembly: C:\Users\USER\Documents\Virus-Attack\juego_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\USER\Documents\Virus-Attack\juego_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.521782 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.774510 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 312.
+Total: 0.361595 ms (FindLiveObjects: 0.058029 ms CreateObjectMapping: 0.048554 ms MarkObjects: 0.232116 ms  DeleteObjects: 0.021711 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.989651 ms
+
+Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 204.
+Total: 0.614239 ms (FindLiveObjects: 0.041054 ms CreateObjectMapping: 0.034738 ms MarkObjects: 0.182771 ms  DeleteObjects: 0.353700 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.750430 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 312.
+Total: 0.427125 ms (FindLiveObjects: 0.065924 ms CreateObjectMapping: 0.063160 ms MarkObjects: 0.275539 ms  DeleteObjects: 0.021316 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.488538 ms
+
+Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 204.
+Total: 0.626476 ms (FindLiveObjects: 0.044212 ms CreateObjectMapping: 0.050133 ms MarkObjects: 0.179613 ms  DeleteObjects: 0.350937 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1d3c -> priority: 1 
+  Thread -> id: 1630 -> priority: 1 
