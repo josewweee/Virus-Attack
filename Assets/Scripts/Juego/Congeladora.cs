@@ -47,6 +47,7 @@ public class Congeladora : MonoBehaviour {
 	void OnMouseDown(){
 		StartCoroutine ("Congelar");
 		descongelar = true;
+		GetComponent<AudioSource> ().Play();
 		esteObjeto.GetComponent<SpriteRenderer> ().enabled = false;
 		esteObjeto.GetComponent<MoverEnemigos> ().speed = 0f;
 	}

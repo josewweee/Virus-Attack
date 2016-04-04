@@ -8,9 +8,9 @@ public class NumeroAleatorio : MonoBehaviour {
 	public float frecuencia = 0.8f;
 
 	//variables de tiempo para saber cuando crear objetos
-	private float TiempoParaCrearVidas = 20f;
-	private float TiempoParaCrearBombas = 10f;
-	private float TiempoParaCrearAceleradoras = 8f;
+	private float TiempoParaCrearVidas = 23f;
+	private float TiempoParaCrearBombas = 4f;
+	private float TiempoParaCrearAceleradoras = 3f;
 	private float TiempoParaCrearCongeladoras = 11f;
 	private float TiempoParaCrearEnemigos;
 	private float TiempoTranscurrido;
@@ -82,7 +82,7 @@ public class NumeroAleatorio : MonoBehaviour {
 				DondeInstanciar = "izquierda";
 				break;
 			}
-			TiempoParaCrearVidas += 20f;
+			TiempoParaCrearVidas += TiempoParaCrearVidas;
 		}
 		//switch para saber donde se van a crear las bombas
 		TiempoTranscurrido = jugador.GetComponent<Tiempo>().puntaje;
@@ -106,7 +106,7 @@ public class NumeroAleatorio : MonoBehaviour {
 				DondeInstanciarB = "izquierda";
 				break;
 			}
-			TiempoParaCrearBombas += 10f;
+			TiempoParaCrearBombas += 5f;
 		}
 
 		//switch para saber donde se van a crear los aceleradoras
@@ -131,7 +131,7 @@ public class NumeroAleatorio : MonoBehaviour {
 				DondeInstanciarA = "izquierda";
 				break;
 			}
-			TiempoParaCrearAceleradoras += 8f;
+			TiempoParaCrearAceleradoras += 3f;
 		}
 
 		//switch para sabetr donde se van a crear las congeladoras

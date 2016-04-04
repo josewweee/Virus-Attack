@@ -4,8 +4,9 @@ using System.Collections;
 public class Bomba : MonoBehaviour {
 	//objeto onda expansiva
 	public GameObject OndaExpansiva;
+
 	void Start () {
-	
+		
 	}
 
 	void Update () {
@@ -23,7 +24,14 @@ public class Bomba : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
+		GetComponent<AudioSource> ().Play();
+		GetComponent<SpriteRenderer> ().enabled = false;
+		GetComponent<MoverEnemigos> ().speed = 0f;
 		Instantiate (OndaExpansiva, transform.position, transform.rotation);
+		Invoke("destroy", GetComponent<AudioSource> ().clip.length);
+	}
+
+	void destroy(){
 		Destroy (this.gameObject);
 	}
 }

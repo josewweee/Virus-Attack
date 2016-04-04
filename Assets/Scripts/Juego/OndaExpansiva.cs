@@ -5,8 +5,9 @@ public class OndaExpansiva : MonoBehaviour {
 
 	//variable de tiempo de vida de la onda
 	private float TiempoDeExplocion;
+
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
@@ -18,7 +19,7 @@ public class OndaExpansiva : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll){
-		if (coll.gameObject.tag == "Vida" || coll.gameObject.tag == "Enemigo") {
+		if (coll.gameObject.tag == "Vida" || coll.gameObject.tag == "Enemigo" || coll.gameObject.tag == "Aceleradora" || coll.gameObject.tag == "Congeladora") {
 			Destroy (coll.gameObject);
 		}
 	}
