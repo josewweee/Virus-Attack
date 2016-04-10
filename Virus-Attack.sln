@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{5CF14DDC-864C-061B-57C2-B6644C2679BF}") = "Virus-Attack", "Assembly-CSharp.csproj", "{8033130A-E623-EC11-45F3-4E93CCB8AE18}"
+EndProject
+Project("{5CF14DDC-864C-061B-57C2-B6644C2679BF}") = "Virus-Attack", "Assembly-CSharp-Editor.csproj", "{8C516AB8-DEAD-313A-1A14-DEC3509DBDAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8033130A-E623-EC11-45F3-4E93CCB8AE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8033130A-E623-EC11-45F3-4E93CCB8AE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8033130A-E623-EC11-45F3-4E93CCB8AE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8033130A-E623-EC11-45F3-4E93CCB8AE18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C516AB8-DEAD-313A-1A14-DEC3509DBDAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C516AB8-DEAD-313A-1A14-DEC3509DBDAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C516AB8-DEAD-313A-1A14-DEC3509DBDAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C516AB8-DEAD-313A-1A14-DEC3509DBDAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

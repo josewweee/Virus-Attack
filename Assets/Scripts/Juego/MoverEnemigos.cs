@@ -41,6 +41,7 @@ public class MoverEnemigos : MonoBehaviour {
 			speed = 5f;
 		}
 	}
+
 	//funcion para congelar las esporas
 	public void Congelar(bool congelacion){
 		if (congelacion == true) {

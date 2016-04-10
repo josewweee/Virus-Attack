@@ -5,7 +5,7 @@ licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 2
   fontSize: 100
-  forceTextureCase: -2
+  forceTextureCase: 3
   characterSpacing: 1
   characterPadding: 0
   includeFontData: 1
@@ -13,8 +13,8 @@ TrueTypeFontImporter:
   fontNames:
   - 'Record1234567890: Lifes'
   fallbackFontReferences: []
-  customCharacters: Rescord :1234567890Lif
-  fontRenderingMode: 0
+  customCharacters: Rescord :1234567890LifalpySPBmb-thuExFDH
+  fontRenderingMode: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

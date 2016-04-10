@@ -19,7 +19,7 @@ public class DestruccionEnemigos : MonoBehaviour {
 			{
 				if (hit.collider.gameObject.tag == "Enemigo" || hit.collider.gameObject.tag == "Vida")
 				{
-					OnMouseDown();
+					OnMouseDown ();
 				}
 			}
 		}
@@ -28,6 +28,13 @@ public class DestruccionEnemigos : MonoBehaviour {
 
     void OnMouseDown()
     {
-        Destroy(this.gameObject);
+		GetComponent<AudioSource> ().Play();
+		GetComponent<SpriteRenderer> ().enabled = false;
+		GetComponent<MoverEnemigos> ().speed = 0f;
+		Invoke("destroy", GetComponent<AudioSource> ().clip.length);
     }
+
+	void destroy(){
+		Destroy(this.gameObject);
+	}
 }

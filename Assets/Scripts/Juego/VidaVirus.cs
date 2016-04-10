@@ -10,13 +10,15 @@ public class VidaVirus : MonoBehaviour {
 	public TextMesh VidasText;
 
 	//referencia a todos los glubulos enemigos
-	public GameObject[] Enemigos;
+	private GameObject[] Enemigos;
+
+	//variable del efecto de la aleatoria
+	private int random;
 
 	void Start () {
 
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		VidasText.text = Vida.ToString("f0");
 		Enemigos = GameObject.FindGameObjectsWithTag ("Enemigo");
@@ -49,6 +51,16 @@ public class VidaVirus : MonoBehaviour {
 			Destroy (coll.gameObject);
 		}
 
+		if (coll.gameObject.tag == "Aleatoria") {
+			Destroy (coll.gameObject);
+			random = Random.Range (0, 100);
+			if (random > 50) {
+				Vida++;
+			} else {
+				Vida--;
+			}
+
+		}
 	}
 
 	 int getVida(){

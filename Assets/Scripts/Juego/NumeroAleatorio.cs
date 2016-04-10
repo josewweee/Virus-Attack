@@ -4,14 +4,20 @@ using System.Collections;
 public class NumeroAleatorio : MonoBehaviour {
 	//referencia donde tomaremos el tiempo
 	private GameObject jugador;
+
+	// variable para saber si se cerro el tutorial para poder comenzar el juego
+	public bool ComenzarJuego = false;
+	public float TiempoComenzar = 0;
+
 	//variable para la dificultad del juego
 	public float frecuencia = 0.8f;
 
 	//variables de tiempo para saber cuando crear objetos
-	private float TiempoParaCrearVidas = 20f;
-	private float TiempoParaCrearBombas = 10f;
-	private float TiempoParaCrearAceleradoras = 8f;
+	private float TiempoParaCrearVidas = 23f;
+	private float TiempoParaCrearBombas = 4f;
+	private float TiempoParaCrearAceleradoras = 3f;
 	private float TiempoParaCrearCongeladoras = 11f;
+	private float TiempoParaCrearAleatorias = 5f;
 	private float TiempoParaCrearEnemigos;
 	private float TiempoTranscurrido;
 
@@ -27,142 +33,173 @@ public class NumeroAleatorio : MonoBehaviour {
 	public string DondeInstanciarA = "";
 	public string DondeInstanciarE = "";
 	public string DondeInstanciarC = "";
+	public string DondeInstanciarF = "";
 
 	void Start () {
 		jugador = GameObject.FindGameObjectWithTag("Jugador");
 		TiempoParaCrearEnemigos = frecuencia;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-		//switch para sabetr donde se van a crear los enemigos
-		TiempoTranscurrido = jugador.GetComponent<Tiempo>().puntaje;
-		if (TiempoTranscurrido > TiempoParaCrearEnemigos) {
-			aleatorio = Random.RandomRange(0, 4);
-			switch(aleatorio){
-			case 0:
-				DondeInstanciarE = "Izquierda";
-				break;
-			case 1:
-				DondeInstanciarE = "Derecha";
-				break;
-			case 2:
-				DondeInstanciarE = "Arriba";
-				break;
-			case 3:
-				DondeInstanciarE = "Abajo";
-				break;
+		//if para saber cuando cerraron el menu de instrucciones o pasaron 5 segundos para comenzar el juego
+		if (TiempoComenzar > 5f || ComenzarJuego == true) {
+			//switch para saber donde se van a crear los enemigos
+			TiempoTranscurrido = jugador.GetComponent<Tiempo> ().puntaje;
+			if (TiempoTranscurrido > TiempoParaCrearEnemigos) {
+				aleatorio = Random.RandomRange (0, 4);
+				switch (aleatorio) {
+				case 0:
+					DondeInstanciarE = "Izquierda";
+					break;
+				case 1:
+					DondeInstanciarE = "Derecha";
+					break;
+				case 2:
+					DondeInstanciarE = "Arriba";
+					break;
+				case 3:
+					DondeInstanciarE = "Abajo";
+					break;
 
-			default:
-				DondeInstanciarE = "izquierda";
-				break;
+				default:
+					DondeInstanciarE = "izquierda";
+					break;
+				}
+				TiempoParaCrearEnemigos += frecuencia;
 			}
-			TiempoParaCrearEnemigos += frecuencia;
-		}
 
-		//switch para sabetr donde se van a crear las vidas
-		TiempoTranscurrido = jugador.GetComponent<Tiempo>().puntaje;
-		if (TiempoTranscurrido > TiempoParaCrearVidas) {
-			aleatorio = Random.RandomRange(0, 4);
-			switch(aleatorio){
-			case 0:
-				DondeInstanciar = "Izquierda";
-				break;
-			case 1:
-				DondeInstanciar = "Derecha";
-				break;
-			case 2:
-				DondeInstanciar = "Arriba";
-				break;
-			case 3:
-				DondeInstanciar = "Abajo";
-				break;
+			//switch para sabetr donde se van a crear las vidas
+			TiempoTranscurrido = jugador.GetComponent<Tiempo> ().puntaje;
+			if (TiempoTranscurrido > TiempoParaCrearVidas) {
+				aleatorio = Random.RandomRange (0, 4);
+				switch (aleatorio) {
+				case 0:
+					DondeInstanciar = "Izquierda";
+					break;
+				case 1:
+					DondeInstanciar = "Derecha";
+					break;
+				case 2:
+					DondeInstanciar = "Arriba";
+					break;
+				case 3:
+					DondeInstanciar = "Abajo";
+					break;
 
-			default:
-				DondeInstanciar = "izquierda";
-				break;
+				default:
+					DondeInstanciar = "izquierda";
+					break;
+				}
+				TiempoParaCrearVidas += TiempoParaCrearVidas;
 			}
-			TiempoParaCrearVidas += 20f;
-		}
-		//switch para saber donde se van a crear las bombas
-		TiempoTranscurrido = jugador.GetComponent<Tiempo>().puntaje;
-		if (TiempoTranscurrido > TiempoParaCrearBombas) {
-			aleatorio = Random.RandomRange(0, 4);
-			switch(aleatorio){
-			case 0:
-				DondeInstanciarB = "Izquierda";
-				break;
-			case 1:
-				DondeInstanciarB = "Derecha";
-				break;
-			case 2:
-				DondeInstanciarB = "Arriba";
-				break;
-			case 3:
-				DondeInstanciarB = "Abajo";
-				break;
+			//switch para saber donde se van a crear las bombas
+			TiempoTranscurrido = jugador.GetComponent<Tiempo> ().puntaje;
+			if (TiempoTranscurrido > TiempoParaCrearBombas) {
+				aleatorio = Random.RandomRange (0, 4);
+				switch (aleatorio) {
+				case 0:
+					DondeInstanciarB = "Izquierda";
+					break;
+				case 1:
+					DondeInstanciarB = "Derecha";
+					break;
+				case 2:
+					DondeInstanciarB = "Arriba";
+					break;
+				case 3:
+					DondeInstanciarB = "Abajo";
+					break;
 
-			default:
-				DondeInstanciarB = "izquierda";
-				break;
+				default:
+					DondeInstanciarB = "izquierda";
+					break;
+				}
+				TiempoParaCrearBombas += 5f;
 			}
-			TiempoParaCrearBombas += 10f;
-		}
 
-		//switch para saber donde se van a crear los aceleradoras
-		TiempoTranscurrido = jugador.GetComponent<Tiempo>().puntaje;
-		if (TiempoTranscurrido > TiempoParaCrearAceleradoras) {
-			aleatorio = Random.RandomRange(0, 4);
-			switch(aleatorio){
-			case 0:
-				DondeInstanciarA = "Izquierda";
-				break;
-			case 1:
-				DondeInstanciarA = "Derecha";
-				break;
-			case 2:
-				DondeInstanciarA = "Arriba";
-				break;
-			case 3:
-				DondeInstanciarA = "Abajo";
-				break;
+			//switch para saber donde se van a crear los aceleradoras
+			TiempoTranscurrido = jugador.GetComponent<Tiempo> ().puntaje;
+			if (TiempoTranscurrido > TiempoParaCrearAceleradoras) {
+				aleatorio = Random.RandomRange (0, 4);
+				switch (aleatorio) {
+				case 0:
+					DondeInstanciarA = "Izquierda";
+					break;
+				case 1:
+					DondeInstanciarA = "Derecha";
+					break;
+				case 2:
+					DondeInstanciarA = "Arriba";
+					break;
+				case 3:
+					DondeInstanciarA = "Abajo";
+					break;
 
-			default:
-				DondeInstanciarA = "izquierda";
-				break;
+				default:
+					DondeInstanciarA = "izquierda";
+					break;
+				}
+				TiempoParaCrearAceleradoras += 3f;
 			}
-			TiempoParaCrearAceleradoras += 8f;
-		}
 
-		//switch para sabetr donde se van a crear las congeladoras
-		TiempoTranscurrido = jugador.GetComponent<Tiempo>().puntaje;
-		if (TiempoTranscurrido > TiempoParaCrearCongeladoras) {
-			aleatorio = Random.RandomRange(0, 4);
-			switch(aleatorio){
-			case 0:
-				DondeInstanciarC = "Izquierda";
-				break;
-			case 1:
-				DondeInstanciarC = "Derecha";
-				break;
-			case 2:
-				DondeInstanciarC = "Arriba";
-				break;
-			case 3:
-				DondeInstanciarC = "Abajo";
-				break;
+			//switch para sabetr donde se van a crear las congeladoras
+			TiempoTranscurrido = jugador.GetComponent<Tiempo> ().puntaje;
+			if (TiempoTranscurrido > TiempoParaCrearCongeladoras) {
+				aleatorio = Random.RandomRange (0, 4);
+				switch (aleatorio) {
+				case 0:
+					DondeInstanciarC = "Izquierda";
+					break;
+				case 1:
+					DondeInstanciarC = "Derecha";
+					break;
+				case 2:
+					DondeInstanciarC = "Arriba";
+					break;
+				case 3:
+					DondeInstanciarC = "Abajo";
+					break;
 
-			default:
-				DondeInstanciarC = "izquierda";
-				break;
+				default:
+					DondeInstanciarC = "izquierda";
+					break;
+				}
+				TiempoParaCrearCongeladoras += 15f;
 			}
-			TiempoParaCrearCongeladoras += 15f;
-		}
 
-		//subir la dificultad
-		AumentarDificultad ();
+
+			//switch para sabetr donde se van a crear las aleatorias
+			TiempoTranscurrido = jugador.GetComponent<Tiempo> ().puntaje;
+			if (TiempoTranscurrido > TiempoParaCrearAleatorias) {
+				aleatorio = Random.RandomRange (0, 4);
+				switch (aleatorio) {
+				case 0:
+					DondeInstanciarF = "Izquierda";
+					break;
+				case 1:
+					DondeInstanciarF = "Derecha";
+					break;
+				case 2:
+					DondeInstanciarF = "Arriba";
+					break;
+				case 3:
+					DondeInstanciarF = "Abajo";
+					break;
+
+				default:
+					DondeInstanciarF = "izquierda";
+					break;
+				}
+				TiempoParaCrearAleatorias += TiempoParaCrearAleatorias;
+			}
+
+			//subir la dificultad
+			AumentarDificultad ();
+		} else {
+			TiempoComenzar += Time.deltaTime;
+		}
 	}
-
+	//reseteamos los valores de instanciar
 	public void SetDondeInstanciar(string valor){
 		DondeInstanciar = valor;
 	}
@@ -183,6 +220,10 @@ public class NumeroAleatorio : MonoBehaviour {
 		DondeInstanciarC = valor;
 	}
 
+	public void SetDondeInstanciarF(string valor){
+		DondeInstanciarF = valor;
+	}
+
 	//funcion para aumentar la produccion de esporas 0.1sec cada 20 sec
 	void AumentarDificultad()
 	{
@@ -190,5 +231,9 @@ public class NumeroAleatorio : MonoBehaviour {
 			frecuencia -= 0.1f;
 			TiempoSubirDificultad += 20f;
 		}
+	}
+
+	public void SetComenzarJuego(){
+		ComenzarJuego = true;
 	}
 }
